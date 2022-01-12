@@ -130,15 +130,12 @@ span{
     cursor: pointer;
     display: none;
 }
-/* sessão sobre*/
+/* todos os codigos similares*/
 section{
     padding: 100px 0;
 }
-.about{
-    font-family: 'Roboto' sans-serif;
-}
-.about .title{
-    font-family: 'Ubuntu' sans-serif;
+section .title{
+    font-family: 'Ubuntu', sans-serif;
     text-align: center;
     font-size: 40px;
     font-weight: 500;
@@ -146,7 +143,7 @@ section{
     padding-bottom: 20px;
     position: relative;
 }
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -156,7 +153,7 @@ section{
     background: #111;
     transform: translateX(-50%);
 }
-.about .title::after{
+section .title::after{
     content: "Quem sou eu";
     position: absolute;
     bottom: -12px;
@@ -167,17 +164,129 @@ section{
     padding: 5px;
     transform: translateX(-50%);
 }
+/* sessão sobre*/
+
+.about, .services{
+    font-family: 'Roboto', sans-serif;
+}
+.about .about-content, .services .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Sobre */
+
+
+.about .title::after{
+    content: "Quem sou eu";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text  {
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: #00804b;
+}
+.about .about-content .right p{
+    text-align: justify;
+    font-size: 18px;
+    padding-top: 5px;
+    
+
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: #00804b;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #00804b;
+    transition: all 0.3s ease;
+
+}
+.about .about-content .right a:hover{
+    color: #00804b;
+    background: none;
+
+}
 .about .about-content .left img{
     width: 400px;
     height: 400px;
     object-fit: cover;
     border-radius: 6px;
 }
+/* sessão serviços*/
+.services{
+    background: #111;
+    color: #fff;
+}
+.services .title::before{
+    background: #fff;
+}
+.services .title::after{
+    background: #111;
+    content: "O que ofercemos";
+    
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*para deixar o desenhos dos icones grandes no serviços*/
+.services .serv-content .card:hover{
+    background-color: rgba(114, 9, 30, 0.563);
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+/*cores dos icones serviços*/
+.services .serv-content .card ion-icon{
+    font-size: 70px;
+    color: crimson;
+}
+.services .serv-content .card:hover ion-icon{
+color: #00804b;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/* Responsivo do Ricardo*/
+.about .about-content .column{
+    width: 50%;
+}
+@media (max-width: 1300px){
+    .navbar .max-width{
+        margin-left: 0;
+    }
+}
 
 /* Responsivo*/
 @media (max-width: 1104px){
-    .navbar .max-width{
-        margin-left: 0;
+    .about .about-content .left img{
+        width: 350px;
+        height: 350px;
     }
 }
 @media (max-width: 991px){
@@ -187,6 +296,7 @@ section{
 }
 @media (max-width: 947px){
     .max-width{
+        max-width: 800px;
         padding: 0 50px;
     }
     .menu-btn{
@@ -231,6 +341,21 @@ section{
         font-size: 23px;
         padding: 10px 30px;
     }
+    .about .about-content .column{
+        width: 50%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 690px){
     .home .home-content .text-2{
@@ -244,6 +369,9 @@ section{
     .home .home-content a{
         font-size: 20px;
         
+    }
+    .services .serv-content .card{
+        width: 100%;
     }
 
 }
