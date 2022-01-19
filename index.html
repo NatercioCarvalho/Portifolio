@@ -12,17 +12,21 @@
     
 </head>
 <body>
+    <div class="scroll-up-btn">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+
+    </div>
     <div class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Port<span>fólio</span"></a></div>
             <ul class="menu">
 
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Especialidade</a></li>
-                <li><a href="#">Equipe</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#skills">Especialidade</a></li>
+                <li><a href="#teams">Equipe</a></li>
+                <li><a href="#contact">Contato</a></li>
 
             </ul>
             <div class="menu-btn">
@@ -36,11 +40,11 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Ola, meu nome é</div>
+                <div class="text-1">Olá, meu nome é</div>
 
                 <div class="text-2">Natércio Carvalho</div>
 
-                <div class="text-3">eu sou <span>Developer</span></div>
+                <div class="text-3">eu sou <span class="typing"></span></div>
 
                 <a href="#">Contratar-me</a>
 
@@ -222,6 +226,83 @@
 
     </section>
 
+    <!--Sessão contato-->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contato</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Fale Conosco</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, tempora adipisci autem possimus quaerat mollitia sapiente unde harum, placeat incidunt, neque iure quae facere odit corrupti aperiam laudantium maiores.</p>
+                
+                <div class="icons">
+                    <div class="row">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <div class="info">
+                            <div class="head">Nome</div>
+                            <div class="sub-title">Ricardo Ferreira</div>
+                        </div>
+
+                    </div>
+                        <div class="row">
+                            <ion-icon name="earth-outline"></ion-icon>
+                            <div class="info">
+                                <div class="head">Endereço</div>
+                                <div class="sub-title">São Paulo - SP</div>
+                            </div>
+                            
+    
+                        </div>
+                            
+                        <div class="row">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">natercio.carvalho1@gmail.com</div>
+                            </div>
+                        </div>
+                            </div>
+                        </div><!--column left-->
+                        <div class="column right">
+                            <div class="text">Mensagem</div>
+                            <form action="#">
+                                <div class="fields">
+                                    <div class="field name">
+                                        <input type="text" placeholder="Nome" required>
+
+                                    </div>
+                                    <div class="field email">
+                                        <input type="email" placeholder="Email" required>
+
+                                    </div>
+
+                                </div>
+                                <div class="field">
+                                    <div class="fields">
+                                        <input type="text" placeholder="sobrenome" required>
+
+                                    </div>
+                                    <div class="field textarea">
+                                        <textarea cols="30" rows="10" placeholder="Escrever...." required></textarea>
+
+                                    </div>
+                                    <div class="button">
+                                        <button type="submit">Enviar</button>
+
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--sessão footer-->
+                <footer>
+                    <p> Criado por <span><a href="#">Front</a> </span> | Todos os direitos reservados 2021 </p>
+                </footer>
+
     
     
     
@@ -232,6 +313,7 @@
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     
 </body>
 </html>
